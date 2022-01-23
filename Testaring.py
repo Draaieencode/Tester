@@ -1,4 +1,8 @@
 import time
+import webbrowser
+import random
+import math
+
 
 usr_input = input('Hi, what would your name be?')
 print('Hello' + " " + usr_input + ' \nHow old are you?')
@@ -19,9 +23,8 @@ while True:
 		print('I asked yes or no, no ifs or buts')
 		break
 time.sleep(1)
-import random
-import math
-print('Okay! Here we go, pick the range of number i pick from')
+
+print('Okay! Here we go, pick the range of numbers that i will pick from')
 #Taking low input
 lower = int(input('Enter lowest number:-'))
 #Taking high input
@@ -46,6 +49,9 @@ while count < math.log(upper - lower + 1, 2):
 	if x == guess:
 		print("Congratulations you did it in ",
 			  count, " try")
+		input("Your price is ready! are you?")
+		time.sleep(1)
+		webbrowser.open('https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg')
 		# Once guessed, loop will break
 		break
 	elif x > guess:
@@ -58,28 +64,15 @@ while count < math.log(upper - lower + 1, 2):
 if count >= math.log(upper - lower + 1, 2):
 	print("\nThe number is %d" % x)
 	print("\tBetter Luck Next time!")
+	print("Thats a bummer! Here is a present")
+	input('Are you ready for your present?')
+	time.sleep(1)
+	webbrowser.open('https://media.istockphoto.com/photos/grown-hippopotamus-aged-30-years-on-a-white-background-picture-id93216623?s=612x612')
+
+
 
 #Win ? Find monkey picture
 #Los? find hypopotamus picture
 
-import requests
-import Beautifulsoup
-from bs4 import Beautifulsoup
-
-def getdata(url):
-	r = requests.get(url)
-	return r.text
-html = getdata("https://google.com/ape")
-soup = Beautifulsoup(htmldata, 'html.parser')
-for item in soup.find_all('img'):
-	print(item['src'])
 
 
-#while true:
-# usr_input_bole: str = input('Would you like to play a game? Y/N').lower()
-#    if usr_input_bole == 'Y'
-#  print('Hurray! Lets start!')
-#   elif == 'N'
-#   print('Such a shame...')
-# else
-#   print('I asked for Y/N')
